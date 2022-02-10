@@ -1,11 +1,7 @@
 import { signInWithGoogle } from '../firebase/firebase-auth.js';
 
 export default () => {
-<<<<<<< HEAD
-  const viewHome = `
-=======
     const viewLogin = `
->>>>>>> 3f8d5a58264f586dcc73d9e9869fc0a2f2b4d12a
     <section>
         <h1 class='textLeft'> VIAJA PE </h1>
         <img src='../img/airplane.png'>
@@ -25,18 +21,10 @@ export default () => {
         <img src='../img/google_icon.png'><button type='submit' id="btnGoogle"> Continuar con Google </button>
         <p> ¿No tienes una cuenta? <a href=''> Únete </a> </p>
     </div>
-<<<<<<< HEAD
-    </section>
-`;
-  const viewHomeDiv = document.createElement('div');
-  viewHomeDiv.innerHTML = viewHome;
-  return viewHomeDiv;
-=======
     </section>`;
 
     const viewLoginDiv = document.createElement('div');
     viewLoginDiv.innerHTML = viewLogin;
     viewLoginDiv.querySelector('#btnGoogle').addEventListener('click', signInWithGoogle);
     return viewLoginDiv;
->>>>>>> 3f8d5a58264f586dcc73d9e9869fc0a2f2b4d12a
 };
