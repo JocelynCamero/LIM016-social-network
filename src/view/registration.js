@@ -8,23 +8,35 @@ import { addUserInfo } from '../firebase/firebase-data.js';
 
 export default () => {
     const viewRegistration = `
-    <form id = "formRegistration">
-        <input type="text" class="registerInput" id="signUp-user" placeholder="Nombre de usuario" required> </input>
-        <span id="signUpUserErrorMessage"></span>
-        <img></img>
-        <input type="email" class="registerInput" id="signUp-email" placeholder="Correo electrónico" required></input>
-        <img></img>
-        <p id="emailErrorMessage"></p>
-        <input type="password" class="registerInput" id="signUp-password" placeholder="Contraseña" required></input>
-        <img></img>
-        <p id="passwordErrorMessage"></p>
-        <img></img>
-        <input type="checkbox" class="checkTerms" id="checkTerms" required </input><label>Acepto los términos 
-        y condiciones de las Polìticas de Privacidad.</label>
-        <button type="submit" id="btnRegister"> Registrarse </button>
-        <img></img>
-        <p> ¿Ya tienes una cuenta? <a href="#/login"> Iniciar sesión </a> </p>      
-    </form>`;
+    <section id="principalView1">
+        <h1 class="nameSocialNetwork">VIAJA PE</h1>
+        <img class="logo1" src="img/airplane.png"/>
+    </section>
+
+    <section id="principalView2">
+        <div class="hidden">
+            <img class="logo2" src="img/airplane.png"/>
+            <h2 class="text slogan">Lo que está pasando ahora ...</h2>
+        </div>
+
+        <form id = "formRegistration">
+            <input type="text" class="registerInput" id="signUp-user" placeholder="&#xf007;  Nombre de usuario" required> </input>
+            <span id="signUpUserErrorMessage"></span>
+            <input type="email" class="registerInput" id="signUp-email" placeholder="&#xf0e0;  Correo electrónico" required></input>
+            <span id="emailErrorMessage"></span>
+            <input type="password" class="registerInput" id="signUp-password" placeholder="&#xf084;  Contraseña" required></input>
+            <span id="passwordErrorMessage"></span>
+            
+            <div id="termsConditions">
+                <input type="checkbox" class="checkTerms" id="checkTerms" required </input>
+                <label class="text">Acepto los términos y condiciones de las Polìticas de Privacidad.</label>
+            </div>
+
+            <button type="submit" class="btn" id="btnRegister"> Registrarse </button>
+            <p class="text"> ¿Ya tienes una cuenta? </p>
+            <a class="text bold" href="#/login"> Iniciar sesión </a> 
+        </form>
+    </section>`;
 
     const viewRegistrationDiv = document.createElement('div');
     viewRegistrationDiv.innerHTML = viewRegistration;
